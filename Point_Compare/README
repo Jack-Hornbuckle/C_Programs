@@ -1,0 +1,48 @@
+This directory contains a program to compare line segments formed from given point rows from any given text file.
+ This checks how many pairs of line segments constructed from the text file intersect.
+It also includes two test files to test classes used by the program.
+
+
+
+
+Files in the directory:
+  -helper.c: contains helper functions for the classes used by the program to use.
+  -helper.h: the header file for helper.c.
+  -point.c: the class used to create points for the line segments, includes functions
+  to compare points.
+  -point.h: the header file for point.c.
+  -segment.c: the class used to create line segments and compare line segments,
+  includes functions to compare line segments and to see if points are on line segments.
+  -segment.h: the header file for segment.h.
+  -list.c: a working linked list class imported from another project used to assist
+  functions in this project.
+  -list.h: the header file for list.c.
+  -unit_tests.c: the unit test program.
+  -tester.c: the whole system test program.
+  -point_list.txt: a text file containing multiple lines that each consist of a pair of points
+   that form line segments.
+  -segment_compare.c: the program used to compare line segments from the provided text file
+   or from the default text file "point_list.txt".
+
+
+
+
+
+
+   Instructions:
+   	-Compile unit test file "unit_tests.c" with
+     "gcc --std=c99 helper.c point.c list.c segment.c -o unit_tests unit_tests.c -lcunit".
+
+     -Run unit test file "unit_tests.c" with "./unit_tests".
+
+     -compile whole system test file "tester.c" with
+     "gcc --std=c99 helper.c point.c list.c segment.c tester.c -o tester".
+
+     -run the whole system test file with "./tester"
+
+     -Compile main comparison program "segment_compare.c" with
+      "gcc --std=c99 helper.c point.c list.c segment.c segment_compare.c -o segment_compare".
+
+      -Run main comparison program with "./segment_compare" followed by the path to any file
+      that has points printed out in the format of the points in the default file "point_list.txt".
+      Otherwise it uses the default file.
